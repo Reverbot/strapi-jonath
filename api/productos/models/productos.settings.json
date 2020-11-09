@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "Productos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true
+    },
+    "Imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Descripcion_Movil": {
+      "type": "text",
+      "required": true
+    },
+    "categoria": {
+      "model": "categoria"
+    },
+    "Descripcion_PC": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

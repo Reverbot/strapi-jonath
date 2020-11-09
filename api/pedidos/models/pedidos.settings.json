@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedidos",
+  "info": {
+    "name": "Pedidos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Producto": {
+      "type": "string",
+      "required": true
+    },
+    "Costo": {
+      "type": "decimal",
+      "unique": false,
+      "required": true
+    },
+    "imagen_sublimar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Detalles": {
+      "type": "text"
+    },
+    "Contacto": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
