@@ -1,0 +1,8 @@
+{
+    "provider" : "cloudinary",
+    "providerOptions" : {
+        "cloud_name" : "reverbot",
+        "api_key" : "278657612741623",
+        "api_secret" : "g0zhVliPkSfN93z7TbQXtEwgOWo"
+    }
+}
