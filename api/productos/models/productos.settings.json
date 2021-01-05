@@ -34,6 +34,10 @@
     "Descripcion_PC": {
       "type": "text",
       "required": true
+    },
+    "Precio": {
+      "type": "decimal",
+      "required": true
     }
   }
 }

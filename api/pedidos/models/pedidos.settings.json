@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "pedidos",
   "info": {
-    "name": "Pedidos"
+    "name": "Pedidos",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -12,12 +13,12 @@
   "attributes": {
     "Producto": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "Costo": {
       "type": "decimal",
       "unique": false,
-      "required": true
+      "required": false
     },
     "imagen_sublimar": {
       "model": "file",
@@ -33,6 +34,15 @@
     },
     "Contacto": {
       "type": "integer",
+      "required": false
+    },
+    "Finalizado": {
+      "type": "enumeration",
+      "enum": [
+        "Pendiente",
+        "Completado"
+      ],
+      "default": "Pendiente",
       "required": true
     }
   }
