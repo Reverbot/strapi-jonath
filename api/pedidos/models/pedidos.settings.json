@@ -11,10 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Producto": {
-      "type": "string",
-      "required": false
-    },
     "Costo": {
       "type": "decimal",
       "unique": false,
@@ -44,6 +40,13 @@
       ],
       "default": "Pendiente",
       "required": true
+    },
+    "Usuario": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "producto": {
+      "model": "productos"
     }
   }
 }
